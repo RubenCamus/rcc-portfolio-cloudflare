@@ -1,0 +1,85 @@
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+ngx-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-headings {
+  display: flex;
+  padding: 1em;
+  justify-content: space-around;
+}
+.hero-headings h1 {
+  font-weight: bold;
+  font-size: 5em;
+  height: fit-content;
+  width: fit-content;
+  color: ghostwhite;
+}
+
+.infoWrapper {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 4em;
+  padding-inline: 1em;
+}
+.infoWrapper > h1:nth-child(1){
+  color:#d8a48f;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  font-family: 'Sora';
+  }
+.infoWrapper > h1:nth-child(2) {
+  font-family: 'Sora';
+  font-weight: 400;
+  font-size: 3.5em;
+  color: #efebce;
+}
+
+@media only screen and (min-width: 501px) and (max-width: 950px) {
+  .infoWrapper > h1:nth-child(2) {
+    font-size: 2em;
+  }
+  .hero-headings h1 {
+  font-size: 3em;
+  }
+}
+@media only screen and (min-width: 301px) and (max-width: 500px) {
+  .hero-headings h1{
+    font-size: 1.5em;
+  }
+  .infoWrapper {
+    padding: 0.5em;
+    margin-top: 15vh;
+  }
+  .infoWrapper > h1:nth-child(1) {
+    font-size: 2.5em;
+  }
+  .infoWrapper > h1:nth-child(2) {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .hero-headings h1{
+    font-size: 1.25em;
+  }
+  .infoWrapper {
+    padding: 0.5em;
+    margin-top: 15vh;
+  }
+  .infoWrapper > h1:nth-child(1) {
+    font-size: 1.5em;
+  }
+  .infoWrapper > h1:nth-child(2) {
+    font-size: 1em;
+  }
+}
